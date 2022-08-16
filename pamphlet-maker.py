@@ -9,6 +9,99 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import MSO_AUTO_SIZE
 import datetime
 
+
+# 白紙のページを追加した後、レイアウト枠の画像を挿入するための関数
+def add_page(file_name):
+    # 白紙のページを追加
+    slide_layout = pt.slide_layouts[6]
+    slide = pt.slides.add_slide(slide_layout)
+    # 画像の挿入
+    file_path = "./img/" + file_name + ".png"
+    pic = slide.shapes.add_picture(file_path, 0, 0, Cm(18.2), Cm(25.7))  # (file path, x座標, y座標, 横幅, 縦幅)
+    # 画像の回転
+    # pic.rotation = 20
+
+# layout-flame_1-Lとlayout-flame_1(8)-Lのテキストボックス調整用の関数
+def modify_textbox_position_1_L(id):
+    # 1-Lのテキストボックス位置調整
+    slide = pt.slides[id]  # layout-flame_something
+    # テキストボックスを挿入
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = -90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(12.35)
+    textbox.left = Cm(-2.73)
+
+# layout-flame_1-Rとlayout-flame_1(8)-Rのテキストボックス調整用の関数
+def modify_textbox_position_1_R(id):
+    # 1-Lのテキストボックス位置調整
+    slide = pt.slides[id]  # layout-flame_something
+    # テキストボックスを挿入
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = 90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(12.35)
+    textbox.left = Cm(10.95)
+
+# layout-flame_2-2-Lのテキストボックス調整用の関数
+def modify_textbox_position_2_2_L(id):
+    # 1-Lのテキストボックス位置調整
+    slide = pt.slides[id]  # layout-flame_something
+    # テキストボックスを挿入（上側）
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = -90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(6.535)
+    textbox.left = Cm(-2.73)
+    # テキストボックスを挿入（下側）
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = -90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(18.195)
+    textbox.left = Cm(-2.73)
+
+# layout-flame_2-2-Rのテキストボックス調整用の関数
+def modify_textbox_position_2_2_R(id):
+    # 1-Lのテキストボックス位置調整
+    slide = pt.slides[id]  # layout-flame_something
+    # テキストボックスを挿入（上側）
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = 90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(6.535)
+    textbox.left = Cm(10.95)
+    # テキストボックスを挿入（下側）
+    textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
+    textbox.text = 'ここに会社名が入ります'
+    textbox.rotation = 90
+    text_frame = textbox.text_frame
+    text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
+    text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
+    text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
+    textbox.top = Cm(18.195)
+    textbox.left = Cm(10.95)
+
+
 # Presentationクラスをインスタンス化
 pt = Presentation()
 
@@ -30,17 +123,6 @@ text_frame.text = 'テキストボックスを挿入しました。'
 # テキストボックスに段落の追加
 p = text_frame.add_paragraph()
 p.text = 'テキストボックスに段落を追加しました。'
-
-# 白紙のページを追加した後、レイアウト枠の画像を挿入するための関数
-def add_page(file_name):
-    # 白紙のページを追加
-    slide_layout = pt.slide_layouts[6]
-    slide = pt.slides.add_slide(slide_layout)
-    # 画像の挿入
-    file_path = "./img/" + file_name + ".png"
-    pic = slide.shapes.add_picture(file_path, 0, 0, Cm(18.2), Cm(25.7))  # (file path, x座標, y座標, 横幅, 縦幅)
-    # 画像の回転
-    # pic.rotation = 20
 
 
 # file name list
@@ -73,22 +155,31 @@ file_name_list = [
 # print(len(file_list))
 
 
-# ファイル名リストからファイル名を順番に取り出して、該当するレイアウト枠を挿入した新規ページを追加
+# ファイル名リストからファイル名を順番に取り出す
 for file_name in file_name_list:
+    # 該当するレイアウト枠を挿入した新規ページを追加
     add_page(file_name)
 
-# 1-Lのテキストボックス
-slide = pt.slides[1]  # 2ページ目
-# テキストボックスを挿入
-textbox = slide.shapes.add_textbox(0, 0, Cm(10), Cm(1))  # (x座標, y座標, 横幅, 縦幅)
-textbox.text = 'ここに会社名が入ります'
-textbox.rotation = -90
-text_frame = textbox.text_frame
-text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
-text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
-text_frame.autosize = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
-textbox.top = Cm(12.35)
-textbox.left = Cm(-2.7)
+    # テキストボックス調整
+    if file_name == "layout-flame_1-L" :
+        id = 1  # layout-flame_1-L
+        modify_textbox_position_1_L(id)
+    elif file_name == "layout-flame_1-R" :
+        id = 2  # layout-flame_1-R
+        modify_textbox_position_1_R(id)
+    elif file_name == "layout-flame_1(8)-L" : 
+        id = 3  # layout-flame_1(8)-L
+        modify_textbox_position_1_L(id)
+    elif file_name == "layout-flame_1(8)-R" : 
+        id = 4  # layout-flame_1(8)-R
+        modify_textbox_position_1_R(id)
+    elif file_name == "layout-flame_2-2-L" : 
+        id = 5  # layout-flame_2-2-L
+        modify_textbox_position_2_2_L(id)
+    elif file_name == "layout-flame_2-2-R" : 
+        id = 6  # layout-flame_2-2-R
+        modify_textbox_position_2_2_R(id)
+
 
 """
 # 図形の挿入
