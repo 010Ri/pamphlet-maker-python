@@ -324,7 +324,7 @@ def insert_ad_1_R(id, ad):
     slide.shapes.add_picture(file_path, Cm(1.62), Cm(1.54), Cm(13.61), Cm(22.63))
 
 # layout-flame_1(8)-Lの画像調整用の関数
-def insert_ad_8_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8):
+def insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8):
     slide = pt.slides[id]  # layout-flame_something
     # 画像の挿入
     file_path = ad1
@@ -345,7 +345,7 @@ def insert_ad_8_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8):
     slide.shapes.add_picture(file_path, Cm(9.91), Cm(18.56), Cm(6.63), Cm(5.58))
 
 # layout-flame_1(8)-Rの画像調整用の関数
-def insert_ad_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8):
+def insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8):
     slide = pt.slides[id]  # layout-flame_something
     # 画像の挿入
     file_path = ad1
@@ -405,10 +405,127 @@ def insert_ad_2_4_4_R(id, ad1, ad2, ad3):
     file_path = ad3
     slide.shapes.add_picture(file_path, Cm(1.68), Cm(18.86), Cm(13.56), Cm(5.12))
 
+# layout-flame_2-4-8-Lの画像調整用の関数
+def insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(3.09), Cm(1.54), Cm(13.56), Cm(11.01))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(3.09), Cm(13.24), Cm(13.56), Cm(5.12))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(3.09), Cm(19.04), Cm(6.63), Cm(5.12))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(9.87), Cm(19.04), Cm(6.63), Cm(5.12))
 
+# layout-flame_2-4-8-Lの画像調整用の関数
+def insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(1.75), Cm(1.63), Cm(13.56), Cm(11.01))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(1.75), Cm(13.24), Cm(13.56), Cm(5.12))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(1.75), Cm(19.12), Cm(6.63), Cm(5.12))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(8.60), Cm(19.12), Cm(6.63), Cm(5.12))
 
+# layout-flame_3-4-Lの画像調整用の関数
+def insert_ad_3_4_L(id, ad1, ad2):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(1.54), Cm(13.56), Cm(16.84))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(19.04), Cm(13.56), Cm(5.12))
 
+# layout-flame_3-4-Rの画像調整用の関数
+def insert_ad_3_4_R(id, ad1, ad2):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(1.37), Cm(13.56), Cm(16.84))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(19.04), Cm(13.56), Cm(5.12))
 
+# layout-flame_3-8-Lの画像調整用の関数
+def insert_ad_3_8_L(id, ad1, ad2, ad3):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(1.54), Cm(13.56), Cm(16.84))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(19.04), Cm(6.63), Cm(5.12))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(9.87), Cm(19.04), Cm(6.63), Cm(5.12))
+
+# layout-flame_3-8-Rの画像調整用の関数
+def insert_ad_3_8_R(id, ad1, ad2, ad3):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(1.37), Cm(13.56), Cm(16.84))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(19.04), Cm(6.63), Cm(5.12))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(8.60), Cm(19.04), Cm(6.63), Cm(5.12))
+
+# layout-flame_3(4)-4-Lの画像調整用の関数
+def insert_ad_34_4_L(id, ad1, ad2, ad3, ad4):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(1.54), Cm(13.56), Cm(5.52))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(7.27), Cm(13.56), Cm(5.52))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(12.85), Cm(13.56), Cm(5.52))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(19.04), Cm(13.56), Cm(5.12))
+
+# layout-flame_3(4)-4-Rの画像調整用の関数
+def insert_ad_34_4_R(id, ad1, ad2, ad3, ad4):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(1.54), Cm(13.56), Cm(5.52))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(7.27), Cm(13.56), Cm(5.52))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(12.85), Cm(13.56), Cm(5.52))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(19.04), Cm(13.56), Cm(5.12))
+
+# layout-flame_3(4)-8-Lの画像調整用の関数
+def insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(1.54), Cm(13.56), Cm(5.52))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(7.27), Cm(13.56), Cm(5.52))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(12.85), Cm(13.56), Cm(5.52))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(2.97), Cm(19.04), Cm(6.63), Cm(5.12))
+    file_path = ad5
+    slide.shapes.add_picture(file_path, Cm(9.87), Cm(19.04), Cm(6.63), Cm(5.12))
+
+# layout-flame_3(4)-8-Rの画像調整用の関数
+def insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5):
+    slide = pt.slides[id]  # layout-flame_something
+    # 画像の挿入
+    file_path = ad1
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(1.54), Cm(13.56), Cm(5.52))
+    file_path = ad2
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(7.27), Cm(13.56), Cm(5.52))
+    file_path = ad3
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(12.85), Cm(13.56), Cm(5.52))
+    file_path = ad4
+    slide.shapes.add_picture(file_path, Cm(1.66), Cm(19.04), Cm(6.63), Cm(5.12))
+    file_path = ad5
+    slide.shapes.add_picture(file_path, Cm(8.60), Cm(19.04), Cm(6.63), Cm(5.12))
 
 
 
@@ -498,7 +615,7 @@ for layout_flame in layout_flame_list:
         ad7 = ads[length-length]
         ad8 = ads[length-length]
         insert_textbox_1_L(id)
-        insert_ad_8_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
+        insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
     elif layout_flame == "layout-flame_1(8)-R" : 
         id = 4  # layout-flame_1(8)-R
         ads = glob.glob('./img/ad-img/*.8_*.*') 
@@ -512,7 +629,7 @@ for layout_flame in layout_flame_list:
         ad7 = ads[length-length]
         ad8 = ads[length-length]
         insert_textbox_1_R(id)
-        insert_ad_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
+        insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
     elif layout_flame == "layout-flame_2-2-L" : 
         id = 5  # layout-flame_2-2-L
         ads = glob.glob('./img/ad-img/*.2_*.*') 
@@ -553,34 +670,120 @@ for layout_flame in layout_flame_list:
         insert_ad_2_4_4_R(id, ad1, ad2, ad3)
     elif layout_flame == "layout-flame_2-4-8-L" : 
         id = 9  # layout-flame_2-4-8-L
+        ads = glob.glob('./img/ad-img/*.2_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad2 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad3 = ads[length-length]
+        ad4 = ads[length-length] 
         insert_textbox_2_4_L(id)
+        insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4)
     elif layout_flame == "layout-flame_2-4-8-R" : 
         id = 10  # layout-flame_2-4-8-R
+        ads = glob.glob('./img/ad-img/*.2_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad2 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad3 = ads[length-length]
+        ad4 = ads[length-length] 
         insert_textbox_2_4_R(id)
+        insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4)
     elif layout_flame == "layout-flame_3-4-L" : 
         id = 11  # layout-flame_3-4-L
+        ads = glob.glob('./img/ad-img/*.3_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad2 = ads[length-length]
         insert_textbox_3_L(id)
+        insert_ad_3_4_L(id, ad1, ad2)
     elif layout_flame == "layout-flame_3-4-R" : 
         id = 12  # layout-flame_3-4-R
+        ads = glob.glob('./img/ad-img/*.3_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad2 = ads[length-length]
         insert_textbox_3_R(id)
+        insert_ad_3_4_R(id, ad1, ad2)
     elif layout_flame == "layout-flame_3-8-L" : 
         id = 13  # layout-flame_3-8-L
+        ads = glob.glob('./img/ad-img/*.3_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad2 = ads[length-length]
+        ad3 = ads[length-length] 
         insert_textbox_3_L(id)
+        insert_ad_3_8_L(id, ad1, ad2, ad3)
     elif layout_flame == "layout-flame_3-8-R" : 
         id = 14  # layout-flame_3-8-R
+        ads = glob.glob('./img/ad-img/*.3_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad2 = ads[length-length]
+        ad3 = ads[length-length] 
         insert_textbox_3_R(id)
+        insert_ad_3_8_R(id, ad1, ad2, ad3)
     elif layout_flame == "layout-flame_3(4)-4-L" : 
         id = 15  # layout-flame_3(4)-4-L
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ad2 = ads[length-length]
+        ad3 = ads[length-length]
+        ad4 = ads[length-length]
         insert_textbox_3_L(id)
+        insert_ad_34_4_L(id, ad1, ad2, ad3, ad4)
     elif layout_flame == "layout-flame_3(4)-4-R" : 
         id = 16  # layout-flame_3(4)-4-R
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ad2 = ads[length-length]
+        ad3 = ads[length-length]
+        ad4 = ads[length-length]
         insert_textbox_3_R(id)
+        insert_ad_34_4_R(id, ad1, ad2, ad3, ad4)
     elif layout_flame == "layout-flame_3(4)-8-L" : 
         id = 17  # layout-flame_3(4)-8-L
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ad2 = ads[length-length]
+        ad3 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad4 = ads[length-length]
+        ad5 = ads[length-length] 
         insert_textbox_3_L(id)
+        insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5)
     elif layout_flame == "layout-flame_3(4)-8-R" : 
         id = 18  # layout-flame_3(4)-8-R
+        ads = glob.glob('./img/ad-img/*.4_*.*') 
+        length = len(ads)
+        ad1 = ads[length-length]
+        ad2 = ads[length-length]
+        ad3 = ads[length-length]
+        ads = glob.glob('./img/ad-img/*.8_*.*')
+        length = len(ads)
+        ad4 = ads[length-length]
+        ad5 = ads[length-length] 
         insert_textbox_3_R(id)
+        insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5)
     elif layout_flame == "layout-flame_3(8)-4-L" : 
         id = 19  # layout-flame_3(8)-4-L
         insert_textbox_3_L(id)
