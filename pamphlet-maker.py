@@ -635,244 +635,322 @@ ads_8 = glob.glob('/Users/kosei/Desktop/transparented/*.8_*.png')
 
 # 新規ページを追加 → テキストボックス追加 → 広告追加
 def greed_1_L(id):
+    global ad_id_1
     layout_flame = "layout-flame_1-L"
     # 該当するレイアウト枠を挿入した新規ページを追加
     add_page(layout_flame)
     ad = ads_1[ad_id_1]  # 添字により任意の写真を指定
+    ad_id_1 += 1
     insert_textbox_1_L(id)
     insert_ad_1_L(id, ad)
 
 def greed_1_R(id):
+    global ad_id_1
     layout_flame = "layout-flame_1-R"
     add_page(layout_flame)
     ad = ads_1[ad_id_1]
+    ad_id_1 += 1
     insert_textbox_1_R(id)
     insert_ad_1_R(id, ad)
 
 def greed_18_L(id):
+    global ad_id_8
     layout_flame = "layout-flame_1(8)-L"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
-    ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
-    ad6 = ads_8[ad_id_8]
-    ad7 = ads_8[ad_id_8]
-    ad8 = ads_8[ad_id_8]
+    ad2 = ads_8[ad_id_8 + 1]
+    ad3 = ads_8[ad_id_8 + 2]
+    ad4 = ads_8[ad_id_8 + 3]
+    ad5 = ads_8[ad_id_8 + 4]
+    ad6 = ads_8[ad_id_8 + 5]
+    ad7 = ads_8[ad_id_8 + 6]
+    ad8 = ads_8[ad_id_8 + 7]
+    ad_id_8 += 8
     insert_textbox_1_L(id)
     insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
 def greed_18_R(id):
+    global ad_id_8
     layout_flame = "layout-flame_1(8)-R"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
-    ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
-    ad6 = ads_8[ad_id_8]
-    ad7 = ads_8[ad_id_8]
-    ad8 = ads_8[ad_id_8]
+    ad2 = ads_8[ad_id_8 + 1]
+    ad3 = ads_8[ad_id_8 + 2]
+    ad4 = ads_8[ad_id_8 + 3]
+    ad5 = ads_8[ad_id_8 + 4]
+    ad6 = ads_8[ad_id_8 + 5]
+    ad7 = ads_8[ad_id_8 + 6]
+    ad8 = ads_8[ad_id_8 + 7]
+    ad_id_8 += 8
     insert_textbox_1_R(id)
     insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
 def greed_2_2_L(id):
+    global ad_id_2
     layout_flame = "layout-flame_2-2-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
-    ad2 = ads_2[ad_id_2]
+    ad2 = ads_2[ad_id_2 + 1]
+    ad_id_2 += 2
     insert_textbox_2_2_L(id)
     insert_ad_2_2_L(id, ad1, ad2)
 
 def greed_2_2_R(id):
+    global ad_id_2
     layout_flame = "layout-flame_2-2-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
-    ad2 = ads_2[ad_id_2]
+    ad2 = ads_2[ad_id_2 + 1]
+    ad_id_2 += 2
     insert_textbox_2_2_R(id)
     insert_ad_2_2_R(id, ad1, ad2)
 
 def greed_2_4_4_L(id):
+    global ad_id_2
+    global ad_id_4
     layout_flame = "layout-flame_2-4-4-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
     ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad3 = ads_4[ad_id_4 + 1]
+    ad_id_2 += 1
+    ad_id_4 += 2
     insert_textbox_2_4_L(id)
     insert_ad_2_4_4_L(id, ad1, ad2, ad3)
 
 def greed_2_4_4_R(id):
+    global ad_id_2
+    global ad_id_4
     layout_flame = "layout-flame_2-4-4-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
     ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad3 = ads_4[ad_id_4 + 1]
+    ad_id_2 += 1
+    ad_id_4 += 2
     insert_textbox_2_4_R(id)
     insert_ad_2_4_4_R(id, ad1, ad2, ad3)
 
 def greed_2_4_8_L(id):
+    global ad_id_2
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_2-4-8-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
     ad2 = ads_4[ad_id_4]
     ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8] 
+    ad4 = ads_8[ad_id_8 + 1] 
+    ad_id_2 += 1
+    ad_id_4 += 1
+    ad_id_8 += 2
     insert_textbox_2_4_L(id)
     insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4)
 
 def greed_2_4_8_R(id):
+    global ad_id_2
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_2-4-8-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
     ad2 = ads_4[ad_id_4]
     ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8] 
+    ad4 = ads_8[ad_id_8 + 1] 
+    ad_id_2 += 1
+    ad_id_4 += 1
+    ad_id_8 += 2
     insert_textbox_2_4_R(id)
     insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4)
 
 def greed_3_4_L(id):
+    global ad_id_3
+    global ad_id_4
     layout_flame = "layout-flame_3-4-L"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
     ad2 = ads_4[ad_id_4]
+    ad_id_3 += 1
+    ad_id_4 += 1
     insert_textbox_3_L(id)
     insert_ad_3_4_L(id, ad1, ad2)
 
 def greed_3_4_R(id):
+    global ad_id_3
+    global ad_id_4
     layout_flame = "layout-flame_3-4-R"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
     ad2 = ads_4[ad_id_4]
+    ad_id_3 += 1
+    ad_id_4 += 1
     insert_textbox_3_R(id)
     insert_ad_3_4_R(id, ad1, ad2)
 
 def greed_3_8_L(id):
+    global ad_id_3
+    global ad_id_8
     layout_flame = "layout-flame_3-8-L"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
     ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8] 
+    ad3 = ads_8[ad_id_8 + 1]
+    ad_id_3 += 1
+    ad_id_8 += 2
     insert_textbox_3_L(id)
     insert_ad_3_8_L(id, ad1, ad2, ad3)
 
 def greed_3_8_R(id):
+    global ad_id_3
+    global ad_id_8
     layout_flame = "layout-flame_3-8-R"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
     ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8] 
+    ad3 = ads_8[ad_id_8 + 1]
+    ad_id_3 += 1
+    ad_id_8 += 2
     insert_textbox_3_R(id)
     insert_ad_3_8_R(id, ad1, ad2, ad3)
 
 def greed_34_4_L(id):
+    global ad_id_4
     layout_flame = "layout-flame_3(4)-4-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
-    ad4 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
+    ad4 = ads_4[ad_id_4 + 3]
+    ad_id_4 += 4
     insert_textbox_3_L(id)
     insert_ad_34_4_L(id, ad1, ad2, ad3, ad4)
 
 def greed_34_4_R(id):
+    global ad_id_4
     layout_flame = "layout-flame_3(4)-4-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
-    ad4 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
+    ad4 = ads_4[ad_id_4 + 3]
+    ad_id_4 += 4
     insert_textbox_3_R(id)
     insert_ad_34_4_R(id, ad1, ad2, ad3, ad4)
 
 def greed_34_8_L(id):
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_3(4)-8-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
     ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8] 
+    ad5 = ads_8[ad_id_8 + 1]
+    ad_id_4 += 3
+    ad_id_8 += 2
     insert_textbox_3_L(id)
     insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5)
 
 def greed_34_8_R(id):
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_3(4)-8-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
     ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8] 
+    ad5 = ads_8[ad_id_8 + 1]
+    ad_id_4 += 3
+    ad_id_8 += 2
     insert_textbox_3_R(id)
     insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5)
 
 def greed_38_4_L(id):
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_3(8)-4-L"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
-    ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
-    ad6 = ads_8[ad_id_8]
+    ad2 = ads_8[ad_id_8 + 1]
+    ad3 = ads_8[ad_id_8 + 2]
+    ad4 = ads_8[ad_id_8 + 3]
+    ad5 = ads_8[ad_id_8 + 4]
+    ad6 = ads_8[ad_id_8 + 5]
     ad7 = ads_4[ad_id_4]
+    ad_id_8 += 6
+    ad_id_4 += 1
     insert_textbox_3_L(id)
     insert_ad_38_4_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7)
 
 def greed_38_8_R(id):
+    global ad_id_8
     layout_flame = "layout-flame_3(8)-8-R"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
-    ad2 = ads_8[ad_id_8]
-    ad3 = ads_8[ad_id_8]
-    ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
-    ad6 = ads_8[ad_id_8]
-    ad7 = ads_8[ad_id_8]
-    ad8 = ads_8[ad_id_8]
+    ad2 = ads_8[ad_id_8 + 1]
+    ad3 = ads_8[ad_id_8 + 2]
+    ad4 = ads_8[ad_id_8 + 3]
+    ad5 = ads_8[ad_id_8 + 4]
+    ad6 = ads_8[ad_id_8 + 5]
+    ad7 = ads_8[ad_id_8 + 6]
+    ad8 = ads_8[ad_id_8 + 7]
+    ad_id_8 += 8
     insert_textbox_3_R(id)
     insert_ad_38_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
 def greed_4_4_4_4_L(id):
+    global ad_id_4
     layout_flame = "layout-flame_4-4-4-4-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
-    ad4 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
+    ad4 = ads_4[ad_id_4 + 3]
+    ad_id_4 += 4
     insert_textbox_4_L(id)
     insert_ad_4_4_4_4_L(id, ad1, ad2, ad3, ad4)
 
 def greed_4_4_4_4_R(id):
+    global ad_id_4
     layout_flame = "layout-flame_4-4-4-4-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
-    ad4 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
+    ad4 = ads_4[ad_id_4 + 3]
+    ad_id_4 += 4
     insert_textbox_4_R(id)
     insert_ad_4_4_4_4_R(id, ad1, ad2, ad3, ad4)
 
 def greed_4_4_4_8_L(id):
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_4-4-4-8-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
     ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
+    ad5 = ads_8[ad_id_8 + 1]
+    ad_id_4 += 3
+    ad_id_8 += 2
     insert_textbox_4_L(id)
     insert_ad_4_4_4_8_L(id, ad1, ad2, ad3, ad4, ad5)
 
 def greed_4_4_4_8_R(id):
+    global ad_id_4
+    global ad_id_8
     layout_flame = "layout-flame_4-4-4-8-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
-    ad2 = ads_4[ad_id_4]
-    ad3 = ads_4[ad_id_4]
+    ad2 = ads_4[ad_id_4 + 1]
+    ad3 = ads_4[ad_id_4 + 2]
     ad4 = ads_8[ad_id_8]
-    ad5 = ads_8[ad_id_8]
+    ad5 = ads_8[ad_id_8 + 1]
+    ad_id_4 += 3
+    ad_id_8 += 2
     insert_textbox_4_R(id)
     insert_ad_4_4_4_8_R(id, ad1, ad2, ad3, ad4, ad5)
 
@@ -912,11 +990,13 @@ layout_flame_list = [
     "layout-flame_4-4-4-8-R"   # 5
 ]
 
-for i in range(10):
+for i in range(3):
     num = random.randint(1, 4)
-    print(num)
+    #print(num)
     if num == 1:
+        print(ad_id_4)
         greed_4_4_4_8_R(i)
+        print(ad_id_4)
     elif num == 2:
         greed_38_8_R(i)
     elif num == 3:
