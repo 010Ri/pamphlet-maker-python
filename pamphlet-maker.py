@@ -701,7 +701,7 @@ def greed_2_2_R():
     insert_ad_2_2_R(id, ad1, ad2)
 
 def greed_2_4_4_L():
-    layout_flame = "layout-flame_2-4-4-L" : 
+    layout_flame = "layout-flame_2-4-4-L"
     add_page(layout_flame)
     id = 7  # layout-flame_2-4-4-L
     ads = glob.glob('./img/ad-img/*.2_*.*') 
