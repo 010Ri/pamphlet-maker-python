@@ -636,6 +636,8 @@ ads_8 = glob.glob('/Users/kosei/Desktop/transparented/*.8_*.png')
 # 新規ページを追加 → テキストボックス追加 → 広告追加
 def greed_1_L(id):
     global ad_id_1
+    if ad_id_1 > len(ads_1) - 1: 
+        return
     layout_flame = "layout-flame_1-L"
     # 該当するレイアウト枠を挿入した新規ページを追加
     add_page(layout_flame)
@@ -646,6 +648,8 @@ def greed_1_L(id):
 
 def greed_1_R(id):
     global ad_id_1
+    if ad_id_1 > len(ads_1) - 1: 
+        return
     layout_flame = "layout-flame_1-R"
     add_page(layout_flame)
     ad = ads_1[ad_id_1]
@@ -655,6 +659,8 @@ def greed_1_R(id):
 
 def greed_18_L(id):
     global ad_id_8
+    if ad_id_8 > len(ads_8) - 8: 
+        return
     layout_flame = "layout-flame_1(8)-L"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
@@ -671,6 +677,8 @@ def greed_18_L(id):
 
 def greed_18_R(id):
     global ad_id_8
+    if ad_id_8 > len(ads_8) - 8: 
+        return
     layout_flame = "layout-flame_1(8)-R"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
@@ -687,6 +695,8 @@ def greed_18_R(id):
 
 def greed_2_2_L(id):
     global ad_id_2
+    if ad_id_2 > len(ads_2) - 2: 
+        return
     layout_flame = "layout-flame_2-2-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -697,6 +707,8 @@ def greed_2_2_L(id):
 
 def greed_2_2_R(id):
     global ad_id_2
+    if ad_id_2 > len(ads_2) - 2: 
+        return
     layout_flame = "layout-flame_2-2-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -708,6 +720,8 @@ def greed_2_2_R(id):
 def greed_2_4_4_L(id):
     global ad_id_2
     global ad_id_4
+    if ad_id_2 > len(ads_2) - 1 or ad_id_4 > len(ads_4) - 2: 
+        return
     layout_flame = "layout-flame_2-4-4-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -721,6 +735,8 @@ def greed_2_4_4_L(id):
 def greed_2_4_4_R(id):
     global ad_id_2
     global ad_id_4
+    if ad_id_2 > len(ads_2) - 1 or ad_id_4 > len(ads_4) - 2: 
+        return
     layout_flame = "layout-flame_2-4-4-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -735,6 +751,8 @@ def greed_2_4_8_L(id):
     global ad_id_2
     global ad_id_4
     global ad_id_8
+    if ad_id_2 > len(ads_2) - 1 or ad_id_4 > len(ads_4) - 1 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_2-4-8-L"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -751,6 +769,8 @@ def greed_2_4_8_R(id):
     global ad_id_2
     global ad_id_4
     global ad_id_8
+    if ad_id_2 > len(ads_2) - 1 or ad_id_4 > len(ads_4) - 1 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_2-4-8-R"
     add_page(layout_flame)
     ad1 = ads_2[ad_id_2]
@@ -766,6 +786,8 @@ def greed_2_4_8_R(id):
 def greed_3_4_L(id):
     global ad_id_3
     global ad_id_4
+    if ad_id_3 > len(ads_3) - 1 or ad_id_4 > len(ads_4) - 1: 
+        return
     layout_flame = "layout-flame_3-4-L"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
@@ -778,6 +800,8 @@ def greed_3_4_L(id):
 def greed_3_4_R(id):
     global ad_id_3
     global ad_id_4
+    if ad_id_3 > len(ads_3) - 1 or ad_id_4 > len(ads_4) - 1: 
+        return
     layout_flame = "layout-flame_3-4-R"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
@@ -790,6 +814,8 @@ def greed_3_4_R(id):
 def greed_3_8_L(id):
     global ad_id_3
     global ad_id_8
+    if ad_id_3 > len(ads_3) - 1 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_3-8-L"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
@@ -803,6 +829,8 @@ def greed_3_8_L(id):
 def greed_3_8_R(id):
     global ad_id_3
     global ad_id_8
+    if ad_id_3 > len(ads_3) - 1 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_3-8-R"
     add_page(layout_flame)
     ad1 = ads_3[ad_id_3]
@@ -815,6 +843,8 @@ def greed_3_8_R(id):
 
 def greed_34_4_L(id):
     global ad_id_4
+    if ad_id_4 > len(ads_4) - 4: 
+        return
     layout_flame = "layout-flame_3(4)-4-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -827,6 +857,8 @@ def greed_34_4_L(id):
 
 def greed_34_4_R(id):
     global ad_id_4
+    if ad_id_4 > len(ads_4) - 4: 
+        return
     layout_flame = "layout-flame_3(4)-4-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -840,6 +872,8 @@ def greed_34_4_R(id):
 def greed_34_8_L(id):
     global ad_id_4
     global ad_id_8
+    if ad_id_4 > len(ads_4) - 3 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_3(4)-8-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -855,6 +889,8 @@ def greed_34_8_L(id):
 def greed_34_8_R(id):
     global ad_id_4
     global ad_id_8
+    if ad_id_4 > len(ads_4) - 3 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_3(4)-8-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -870,6 +906,8 @@ def greed_34_8_R(id):
 def greed_38_4_L(id):
     global ad_id_4
     global ad_id_8
+    if ad_id_4 > len(ads_4) - 1 or ad_id_8 > len(ads_8) - 6: 
+        return
     layout_flame = "layout-flame_3(8)-4-L"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
@@ -886,6 +924,8 @@ def greed_38_4_L(id):
 
 def greed_38_8_R(id):
     global ad_id_8
+    if ad_id_8 > len(ads_8) - 8: 
+        return
     layout_flame = "layout-flame_3(8)-8-R"
     add_page(layout_flame)
     ad1 = ads_8[ad_id_8]
@@ -902,6 +942,8 @@ def greed_38_8_R(id):
 
 def greed_4_4_4_4_L(id):
     global ad_id_4
+    if ad_id_4 > len(ads_4) - 4: 
+        return
     layout_flame = "layout-flame_4-4-4-4-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -914,6 +956,8 @@ def greed_4_4_4_4_L(id):
 
 def greed_4_4_4_4_R(id):
     global ad_id_4
+    if ad_id_4 > len(ads_4) - 4: 
+        return
     layout_flame = "layout-flame_4-4-4-4-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -927,6 +971,8 @@ def greed_4_4_4_4_R(id):
 def greed_4_4_4_8_L(id):
     global ad_id_4
     global ad_id_8
+    if ad_id_4 > len(ads_4) - 3 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_4-4-4-8-L"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -942,6 +988,8 @@ def greed_4_4_4_8_L(id):
 def greed_4_4_4_8_R(id):
     global ad_id_4
     global ad_id_8
+    if ad_id_4 > len(ads_4) - 3 or ad_id_8 > len(ads_8) - 2: 
+        return
     layout_flame = "layout-flame_4-4-4-8-R"
     add_page(layout_flame)
     ad1 = ads_4[ad_id_4]
@@ -990,20 +1038,58 @@ layout_flame_list = [
     "layout-flame_4-4-4-8-R"   # 5
 ]
 
-for i in range(3):
-    num = random.randint(1, 4)
-    #print(num)
+for i in range(10):
+    num = random.randint(1, 24)
+    print(str(i) + ' : ' + str(num))
     if num == 1:
-        print(ad_id_4)
-        greed_4_4_4_8_R(i)
-        print(ad_id_4)
+        greed_1_L(i)
     elif num == 2:
-        greed_38_8_R(i)
+        greed_1_R(i)
     elif num == 3:
         greed_18_L(i)
     elif num == 4:
+        greed_18_R(i)
+    elif num == 5:
         greed_2_2_L(i)
-
+    elif num == 6:
+        greed_2_2_R(i)
+    elif num == 7:
+        greed_2_4_4_L(i)
+    elif num == 8:
+        greed_2_4_4_R(i)
+    elif num == 9:
+        greed_2_4_8_L(i)
+    elif num == 10:
+        greed_2_4_8_R(i)
+    elif num == 11:
+        greed_3_4_L(i)
+    elif num == 12:
+        greed_3_4_R(i)
+    elif num == 13:
+        greed_3_8_L(i)
+    elif num == 14:
+        greed_3_8_R(i)
+    elif num == 15:
+        greed_34_4_L(i)
+    elif num == 16:
+        greed_34_4_R(i)
+    elif num == 17:
+        greed_34_8_L(i)
+    elif num == 18:
+        greed_34_8_R(i)
+    elif num == 19:
+        greed_38_4_L(i)
+    elif num == 20:
+        greed_38_8_R(i)
+    elif num == 21:
+        greed_4_4_4_4_L(i)
+    elif num == 22:
+        greed_4_4_4_4_R(i)
+    elif num == 23:
+        greed_4_4_4_8_L(i)
+    elif num == 24:
+        greed_4_4_4_8_R(i)
+    
 
 # ファイルを任意の名前で保存（現在時刻をファイル名として保存するようにしている）
 now = datetime.datetime.now()  # 現在時刻の取得
