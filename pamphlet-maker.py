@@ -9,6 +9,7 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import MSO_AUTO_SIZE
 import datetime
 import glob
+import random
 
 # ------------------------------------------------------------------------------------------------
 # 白紙のページを追加した後、レイアウト枠の画像を挿入するための関数
@@ -621,33 +622,30 @@ def insert_ad_4_4_4_8_R(id, ad1, ad2, ad3, ad4, ad5):
 
 # ------------------------------------------------------------------------------------------------
 # 新規ページを追加 → テキストボックス追加 → 広告追加
-def greed_1_L():
+def greed_1_L(id):
     layout_flame = "layout-flame_1-L"
     # 該当するレイアウト枠を挿入した新規ページを追加
     add_page(layout_flame)
-    id = 1  # layout-flame_1-L
     ads = glob.glob('./img/ad-img/*.1_*.*')  # xxx.1_xxx.pngという名前のファイルをさがす
     # print(len(ads))
     length = len(ads)
-    ad = ads[length-length+1]  # 添字により任意の写真を指定
+    ad = ads[length-length]  # 添字により任意の写真を指定
     # print(ad)
     insert_textbox_1_L(id)
     insert_ad_1_L(id, ad)
-    
-def greed_1_R():
+
+def greed_1_R(id):
     layout_flame = "layout-flame_1-R"
     add_page(layout_flame)
-    id = 2  # layout-flame_1-R
     ads = glob.glob('./img/ad-img/*.1_*.*') 
     length = len(ads)
-    ad = ads[length-length+1]
+    ad = ads[length-length]
     insert_textbox_1_R(id)
     insert_ad_1_R(id, ad)
 
-def greed_18_L():
+def greed_18_L(id):
     layout_flame = "layout-flame_1(8)-L"
     add_page(layout_flame)
-    id = 3  # layout-flame_1(8)-L
     ads = glob.glob('./img/ad-img/*.8_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -661,10 +659,9 @@ def greed_18_L():
     insert_textbox_1_L(id)
     insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
-def greed_18_R():
+def greed_18_R(id):
     layout_flame = "layout-flame_1(8)-R"
     add_page(layout_flame)
-    id = 4  # layout-flame_1(8)-R
     ads = glob.glob('./img/ad-img/*.8_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -678,10 +675,9 @@ def greed_18_R():
     insert_textbox_1_R(id)
     insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
-def greed_2_2_L():
+def greed_2_2_L(id):
     layout_flame = "layout-flame_2-2-L"
     add_page(layout_flame)
-    id = 5  # layout-flame_2-2-L
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -689,10 +685,9 @@ def greed_2_2_L():
     insert_textbox_2_2_L(id)
     insert_ad_2_2_L(id, ad1, ad2)
 
-def greed_2_2_R():
+def greed_2_2_R(id):
     layout_flame = "layout-flame_2-2-R"
     add_page(layout_flame)
-    id = 6  # layout-flame_2-2-R
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -700,10 +695,9 @@ def greed_2_2_R():
     insert_textbox_2_2_R(id)
     insert_ad_2_2_R(id, ad1, ad2)
 
-def greed_2_4_4_L():
+def greed_2_4_4_L(id):
     layout_flame = "layout-flame_2-4-4-L"
     add_page(layout_flame)
-    id = 7  # layout-flame_2-4-4-L
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -714,10 +708,9 @@ def greed_2_4_4_L():
     insert_textbox_2_4_L(id)
     insert_ad_2_4_4_L(id, ad1, ad2, ad3)
 
-def greed_2_4_4_R():
+def greed_2_4_4_R(id):
     layout_flame = "layout-flame_2-4-4-R"
     add_page(layout_flame)
-    id = 8  # layout-flame_2-4-4-R
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -728,10 +721,9 @@ def greed_2_4_4_R():
     insert_textbox_2_4_R(id)
     insert_ad_2_4_4_R(id, ad1, ad2, ad3)
 
-def greed_2_4_8_L():
+def greed_2_4_8_L(id):
     layout_flame = "layout-flame_2-4-8-L"
     add_page(layout_flame)
-    id = 9  # layout-flame_2-4-8-L
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -745,10 +737,9 @@ def greed_2_4_8_L():
     insert_textbox_2_4_L(id)
     insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4)
 
-def greed_2_4_8_R():
+def greed_2_4_8_R(id):
     layout_flame = "layout-flame_2-4-8-R"
     add_page(layout_flame)
-    id = 10  # layout-flame_2-4-8-R
     ads = glob.glob('./img/ad-img/*.2_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -762,10 +753,9 @@ def greed_2_4_8_R():
     insert_textbox_2_4_R(id)
     insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4)
 
-def greed_3_4_L():
+def greed_3_4_L(id):
     layout_flame = "layout-flame_3-4-L"
     add_page(layout_flame)
-    id = 11  # layout-flame_3-4-L
     ads = glob.glob('./img/ad-img/*.3_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -775,10 +765,9 @@ def greed_3_4_L():
     insert_textbox_3_L(id)
     insert_ad_3_4_L(id, ad1, ad2)
 
-def greed_3_4_R():
+def greed_3_4_R(id):
     layout_flame = "layout-flame_3-4-R"
     add_page(layout_flame)
-    id = 12  # layout-flame_3-4-R
     ads = glob.glob('./img/ad-img/*.3_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -788,10 +777,9 @@ def greed_3_4_R():
     insert_textbox_3_R(id)
     insert_ad_3_4_R(id, ad1, ad2)
 
-def greed_3_8_L():
+def greed_3_8_L(id):
     layout_flame = "layout-flame_3-8-L"
     add_page(layout_flame)
-    id = 13  # layout-flame_3-8-L
     ads = glob.glob('./img/ad-img/*.3_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -802,10 +790,9 @@ def greed_3_8_L():
     insert_textbox_3_L(id)
     insert_ad_3_8_L(id, ad1, ad2, ad3)
 
-def greed_3_8_R():
+def greed_3_8_R(id):
     layout_flame = "layout-flame_3-8-R"
     add_page(layout_flame)
-    id = 14  # layout-flame_3-8-R
     ads = glob.glob('./img/ad-img/*.3_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -816,10 +803,9 @@ def greed_3_8_R():
     insert_textbox_3_R(id)
     insert_ad_3_8_R(id, ad1, ad2, ad3)
 
-def greed_34_4_L():
+def greed_34_4_L(id):
     layout_flame = "layout-flame_3(4)-4-L"
     add_page(layout_flame)
-    id = 15  # layout-flame_3(4)-4-L
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -829,10 +815,9 @@ def greed_34_4_L():
     insert_textbox_3_L(id)
     insert_ad_34_4_L(id, ad1, ad2, ad3, ad4)
 
-def greed_34_4_R():
+def greed_34_4_R(id):
     layout_flame = "layout-flame_3(4)-4-R"
     add_page(layout_flame)
-    id = 16  # layout-flame_3(4)-4-R
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -842,10 +827,9 @@ def greed_34_4_R():
     insert_textbox_3_R(id)
     insert_ad_34_4_R(id, ad1, ad2, ad3, ad4)
 
-def greed_34_8_L():
+def greed_34_8_L(id):
     layout_flame = "layout-flame_3(4)-8-L"
     add_page(layout_flame)
-    id = 17  # layout-flame_3(4)-8-L
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -858,10 +842,9 @@ def greed_34_8_L():
     insert_textbox_3_L(id)
     insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5)
 
-def greed_34_8_R():
+def greed_34_8_R(id):
     layout_flame = "layout-flame_3(4)-8-R"
     add_page(layout_flame)
-    id = 18  # layout-flame_3(4)-8-R
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -874,10 +857,9 @@ def greed_34_8_R():
     insert_textbox_3_R(id)
     insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5)
 
-def greed_38_4_L():
+def greed_38_4_L(id):
     layout_flame = "layout-flame_3(8)-4-L"
     add_page(layout_flame)
-    id = 19  # layout-flame_3(8)-4-L
     ads = glob.glob('./img/ad-img/*.8_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -892,10 +874,9 @@ def greed_38_4_L():
     insert_textbox_3_L(id)
     insert_ad_38_4_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7)
 
-def greed_38_8_R():
+def greed_38_8_R(id):
     layout_flame = "layout-flame_3(8)-8-R"
     add_page(layout_flame)
-    id = 20  # layout-flame_3(8)-8-R
     ads = glob.glob('./img/ad-img/*.8_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -909,10 +890,9 @@ def greed_38_8_R():
     insert_textbox_3_R(id)
     insert_ad_38_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
 
-def greed_4_4_4_4_L():
+def greed_4_4_4_4_L(id):
     layout_flame = "layout-flame_4-4-4-4-L"
     add_page(layout_flame)
-    id = 21  # layout-flame_4-4-4-4-L
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -922,10 +902,9 @@ def greed_4_4_4_4_L():
     insert_textbox_4_L(id)
     insert_ad_4_4_4_4_L(id, ad1, ad2, ad3, ad4)
 
-def greed_4_4_4_4_R():
+def greed_4_4_4_4_R(id):
     layout_flame = "layout-flame_4-4-4-4-R"
     add_page(layout_flame)
-    id = 22  # layout-flame_4-4-4-4-R
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -935,10 +914,9 @@ def greed_4_4_4_4_R():
     insert_textbox_4_R(id)
     insert_ad_4_4_4_4_R(id, ad1, ad2, ad3, ad4)
 
-def greed_4_4_4_8_L():
+def greed_4_4_4_8_L(id):
     layout_flame = "layout-flame_4-4-4-8-L"
     add_page(layout_flame)
-    id = 23  # layout-flame_4-4-4-8-L
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -951,10 +929,9 @@ def greed_4_4_4_8_L():
     insert_textbox_4_L(id)
     insert_ad_4_4_4_8_L(id, ad1, ad2, ad3, ad4, ad5)
 
-def greed_4_4_4_8_R():
+def greed_4_4_4_8_R(id):
     layout_flame = "layout-flame_4-4-4-8-R"
     add_page(layout_flame)
-    id = 24  # layout-flame_4-4-4-8-R
     ads = glob.glob('./img/ad-img/*.4_*.*') 
     length = len(ads)
     ad1 = ads[length-length]
@@ -975,55 +952,46 @@ pt = Presentation()
 pt.slide_height=Cm(25.7)
 pt.slide_width=Cm(18.2)
 
-# 白紙のページを追加
-slide_layout = pt.slide_layouts[6]
-slide = pt.slides.add_slide(slide_layout)
-# テキストボックスの挿入
-textbox = slide.shapes.add_textbox(0, 0, Cm(15), Cm(5))  # (x座標, y座標, 横幅, 縦幅)
-text_frame = textbox.text_frame
-# text_frame.paragraphs[0].alignment = PP_ALIGN.CENTER
-# text_frame.vertical_anchor = MSO_ANCHOR.MIDDLE
-text_frame.text = 'python-pptxでパワポを自動生成するやつ'
-# テキストボックスに段落の追加
-p = text_frame.add_paragraph()
-p.text = 'テキストボックスの位置は適当です'
-
-
 # file name list
 layout_flame_list = [
-    "layout-flame_1-L",
-    "layout-flame_1-R",
-    "layout-flame_1(8)-L",
-    "layout-flame_1(8)-R",
-    "layout-flame_2-2-L",
-    "layout-flame_2-2-R",
-    "layout-flame_2-4-4-L",
-    "layout-flame_2-4-4-R",
-    "layout-flame_2-4-8-L",
-    "layout-flame_2-4-8-R",
-    "layout-flame_3-4-L",
-    "layout-flame_3-4-R",
-    "layout-flame_3-8-L",
-    "layout-flame_3-8-R",
-    "layout-flame_3(4)-4-L",
-    "layout-flame_3(4)-4-R",
-    "layout-flame_3(4)-8-L",
-    "layout-flame_3(4)-8-R",
-    "layout-flame_3(8)-4-L",
-    "layout-flame_3(8)-8-R",
-    "layout-flame_4-4-4-4-L",
-    "layout-flame_4-4-4-4-R",
-    "layout-flame_4-4-4-8-L",
-    "layout-flame_4-4-4-8-R"
+    "layout-flame_1-L",        # 1
+    "layout-flame_1-R",        # 1
+    "layout-flame_1(8)-L",     # 8
+    "layout-flame_1(8)-R",     # 8
+    "layout-flame_2-2-L",      # 2
+    "layout-flame_2-2-R",      # 2
+    "layout-flame_2-4-4-L",    # 3
+    "layout-flame_2-4-4-R",    # 3
+    "layout-flame_2-4-8-L",    # 4
+    "layout-flame_2-4-8-R",    # 4
+    "layout-flame_3-4-L",      # 2
+    "layout-flame_3-4-R",      # 2
+    "layout-flame_3-8-L",      # 3
+    "layout-flame_3-8-R",      # 3
+    "layout-flame_3(4)-4-L",   # 4
+    "layout-flame_3(4)-4-R",   # 4
+    "layout-flame_3(4)-8-L",   # 5
+    "layout-flame_3(4)-8-R",   # 5
+    "layout-flame_3(8)-4-L",   # 7
+    "layout-flame_3(8)-8-R",   # 8
+    "layout-flame_4-4-4-4-L",  # 4
+    "layout-flame_4-4-4-4-R",  # 4
+    "layout-flame_4-4-4-8-L",  # 5
+    "layout-flame_4-4-4-8-R"   # 5
 ]
-# print(len(file_list))
 
-# ------------------------------------------------------------------------------------------------
+for i in range(10):
+    num = random.randint(1, 4)
+    print(num)
+    if num == 1:
+        greed_4_4_4_8_R(i)
+    elif num == 2:
+        greed_38_8_R(i)
+    elif num == 3:
+        greed_18_L(i)
+    elif num == 4:
+        greed_2_2_L(i)
 
-
-
-
-# ------------------------------------------------------------------------------------------------
 
 # ファイルを任意の名前で保存（現在時刻をファイル名として保存するようにしている）
 now = datetime.datetime.now()  # 現在時刻の取得
