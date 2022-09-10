@@ -10,11 +10,7 @@ from pptx.enum.text import MSO_AUTO_SIZE
 import datetime
 import glob
 
-
-# TODO: 画像を透過するプログラムを作る
-# MEMO: 画像の大きさは枠いっぱいにする？（アスペクト比変わっちゃうけど・・・）
-
-
+# ------------------------------------------------------------------------------------------------
 # 白紙のページを追加した後、レイアウト枠の画像を挿入するための関数
 def add_page(layout_flame):
     # 白紙のページを追加
@@ -27,6 +23,7 @@ def add_page(layout_flame):
     # 画像の回転
     # pic.rotation = 20
 
+# ------------------------------------------------------------------------------------------------
 # layout-flame_1-L , layout-flame_1(8)-Lのテキストボックス調整用の関数
 def insert_textbox_1_L(id):
     slide = pt.slides[id]  # layout-flame_something
@@ -307,7 +304,7 @@ def insert_textbox_4_R(id):
     textbox.top = Cm(21.05)
     textbox.left = Cm(13.08)
 
-
+# ------------------------------------------------------------------------------------------------
 # layout-flame_1-Lの画像調整用の関数
 def insert_ad_1_L(id, ad):
     slide = pt.slides[id]  # layout-flame_something
@@ -622,7 +619,355 @@ def insert_ad_4_4_4_8_R(id, ad1, ad2, ad3, ad4, ad5):
     file_path = ad5
     slide.shapes.add_picture(file_path, Cm(8.20), Cm(18.98), Cm(6.63), Cm(5.12))
 
+# ------------------------------------------------------------------------------------------------
+# 新規ページを追加 → テキストボックス追加 → 広告追加
+def greed_1_L():
+    layout_flame = "layout-flame_1-L"
+    # 該当するレイアウト枠を挿入した新規ページを追加
+    add_page(layout_flame)
+    id = 1  # layout-flame_1-L
+    ads = glob.glob('./img/ad-img/*.1_*.*')  # xxx.1_xxx.pngという名前のファイルをさがす
+    # print(len(ads))
+    length = len(ads)
+    ad = ads[length-length+1]  # 添字により任意の写真を指定
+    # print(ad)
+    insert_textbox_1_L(id)
+    insert_ad_1_L(id, ad)
+    
+def greed_1_R():
+    layout_flame = "layout-flame_1-R"
+    add_page(layout_flame)
+    id = 2  # layout-flame_1-R
+    ads = glob.glob('./img/ad-img/*.1_*.*') 
+    length = len(ads)
+    ad = ads[length-length+1]
+    insert_textbox_1_R(id)
+    insert_ad_1_R(id, ad)
 
+def greed_18_L():
+    layout_flame = "layout-flame_1(8)-L"
+    add_page(layout_flame)
+    id = 3  # layout-flame_1(8)-L
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    ad6 = ads[length-length]
+    ad7 = ads[length-length]
+    ad8 = ads[length-length]
+    insert_textbox_1_L(id)
+    insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
+
+def greed_18_R():
+    layout_flame = "layout-flame_1(8)-R"
+    add_page(layout_flame)
+    id = 4  # layout-flame_1(8)-R
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    ad6 = ads[length-length]
+    ad7 = ads[length-length]
+    ad8 = ads[length-length]
+    insert_textbox_1_R(id)
+    insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
+
+def greed_2_2_L():
+    layout_flame = "layout-flame_2-2-L"
+    add_page(layout_flame)
+    id = 5  # layout-flame_2-2-L
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    insert_textbox_2_2_L(id)
+    insert_ad_2_2_L(id, ad1, ad2)
+
+def greed_2_2_R():
+    layout_flame = "layout-flame_2-2-R"
+    add_page(layout_flame)
+    id = 6  # layout-flame_2-2-R
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    insert_textbox_2_2_R(id)
+    insert_ad_2_2_R(id, ad1, ad2)
+
+def greed_2_4_4_L():
+    layout_flame = "layout-flame_2-4-4-L" : 
+    add_page(layout_flame)
+    id = 7  # layout-flame_2-4-4-L
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    insert_textbox_2_4_L(id)
+    insert_ad_2_4_4_L(id, ad1, ad2, ad3)
+
+def greed_2_4_4_R():
+    layout_flame = "layout-flame_2-4-4-R"
+    add_page(layout_flame)
+    id = 8  # layout-flame_2-4-4-R
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    insert_textbox_2_4_R(id)
+    insert_ad_2_4_4_R(id, ad1, ad2, ad3)
+
+def greed_2_4_8_L():
+    layout_flame = "layout-flame_2-4-8-L"
+    add_page(layout_flame)
+    id = 9  # layout-flame_2-4-8-L
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad3 = ads[length-length]
+    ad4 = ads[length-length] 
+    insert_textbox_2_4_L(id)
+    insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4)
+
+def greed_2_4_8_R():
+    layout_flame = "layout-flame_2-4-8-R"
+    add_page(layout_flame)
+    id = 10  # layout-flame_2-4-8-R
+    ads = glob.glob('./img/ad-img/*.2_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad3 = ads[length-length]
+    ad4 = ads[length-length] 
+    insert_textbox_2_4_R(id)
+    insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4)
+
+def greed_3_4_L():
+    layout_flame = "layout-flame_3-4-L"
+    add_page(layout_flame)
+    id = 11  # layout-flame_3-4-L
+    ads = glob.glob('./img/ad-img/*.3_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    insert_textbox_3_L(id)
+    insert_ad_3_4_L(id, ad1, ad2)
+
+def greed_3_4_R():
+    layout_flame = "layout-flame_3-4-R"
+    add_page(layout_flame)
+    id = 12  # layout-flame_3-4-R
+    ads = glob.glob('./img/ad-img/*.3_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad2 = ads[length-length]
+    insert_textbox_3_R(id)
+    insert_ad_3_4_R(id, ad1, ad2)
+
+def greed_3_8_L():
+    layout_flame = "layout-flame_3-8-L"
+    add_page(layout_flame)
+    id = 13  # layout-flame_3-8-L
+    ads = glob.glob('./img/ad-img/*.3_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad2 = ads[length-length]
+    ad3 = ads[length-length] 
+    insert_textbox_3_L(id)
+    insert_ad_3_8_L(id, ad1, ad2, ad3)
+
+def greed_3_8_R():
+    layout_flame = "layout-flame_3-8-R"
+    add_page(layout_flame)
+    id = 14  # layout-flame_3-8-R
+    ads = glob.glob('./img/ad-img/*.3_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad2 = ads[length-length]
+    ad3 = ads[length-length] 
+    insert_textbox_3_R(id)
+    insert_ad_3_8_R(id, ad1, ad2, ad3)
+
+def greed_34_4_L():
+    layout_flame = "layout-flame_3(4)-4-L"
+    add_page(layout_flame)
+    id = 15  # layout-flame_3(4)-4-L
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    insert_textbox_3_L(id)
+    insert_ad_34_4_L(id, ad1, ad2, ad3, ad4)
+
+def greed_34_4_R():
+    layout_flame = "layout-flame_3(4)-4-R"
+    add_page(layout_flame)
+    id = 16  # layout-flame_3(4)-4-R
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    insert_textbox_3_R(id)
+    insert_ad_34_4_R(id, ad1, ad2, ad3, ad4)
+
+def greed_34_8_L():
+    layout_flame = "layout-flame_3(4)-8-L"
+    add_page(layout_flame)
+    id = 17  # layout-flame_3(4)-8-L
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad4 = ads[length-length]
+    ad5 = ads[length-length] 
+    insert_textbox_3_L(id)
+    insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5)
+
+def greed_34_8_R():
+    layout_flame = "layout-flame_3(4)-8-R"
+    add_page(layout_flame)
+    id = 18  # layout-flame_3(4)-8-R
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*')
+    length = len(ads)
+    ad4 = ads[length-length]
+    ad5 = ads[length-length] 
+    insert_textbox_3_R(id)
+    insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5)
+
+def greed_38_4_L():
+    layout_flame = "layout-flame_3(8)-4-L"
+    add_page(layout_flame)
+    id = 19  # layout-flame_3(8)-4-L
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    ad6 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad7 = ads[length-length]
+    insert_textbox_3_L(id)
+    insert_ad_38_4_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7)
+
+def greed_38_8_R():
+    layout_flame = "layout-flame_3(8)-8-R"
+    add_page(layout_flame)
+    id = 20  # layout-flame_3(8)-8-R
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    ad6 = ads[length-length]
+    ad7 = ads[length-length]
+    ad8 = ads[length-length]
+    insert_textbox_3_R(id)
+    insert_ad_38_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
+
+def greed_4_4_4_4_L():
+    layout_flame = "layout-flame_4-4-4-4-L"
+    add_page(layout_flame)
+    id = 21  # layout-flame_4-4-4-4-L
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    insert_textbox_4_L(id)
+    insert_ad_4_4_4_4_L(id, ad1, ad2, ad3, ad4)
+
+def greed_4_4_4_4_R():
+    layout_flame = "layout-flame_4-4-4-4-R"
+    add_page(layout_flame)
+    id = 22  # layout-flame_4-4-4-4-R
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ad4 = ads[length-length]
+    insert_textbox_4_R(id)
+    insert_ad_4_4_4_4_R(id, ad1, ad2, ad3, ad4)
+
+def greed_4_4_4_8_L():
+    layout_flame = "layout-flame_4-4-4-8-L"
+    add_page(layout_flame)
+    id = 23  # layout-flame_4-4-4-8-L
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    insert_textbox_4_L(id)
+    insert_ad_4_4_4_8_L(id, ad1, ad2, ad3, ad4, ad5)
+
+def greed_4_4_4_8_R():
+    layout_flame = "layout-flame_4-4-4-8-R"
+    add_page(layout_flame)
+    id = 24  # layout-flame_4-4-4-8-R
+    ads = glob.glob('./img/ad-img/*.4_*.*') 
+    length = len(ads)
+    ad1 = ads[length-length]
+    ad2 = ads[length-length]
+    ad3 = ads[length-length]
+    ads = glob.glob('./img/ad-img/*.8_*.*') 
+    length = len(ads)
+    ad4 = ads[length-length]
+    ad5 = ads[length-length]
+    insert_textbox_4_R(id)
+    insert_ad_4_4_4_8_R(id, ad1, ad2, ad3, ad4, ad5)
+
+# ------------------------------------------------------------------------------------------------
 # Presentationクラスをインスタンス化
 pt = Presentation()
 
@@ -673,287 +1018,12 @@ layout_flame_list = [
 ]
 # print(len(file_list))
 
+# ------------------------------------------------------------------------------------------------
 
-# ファイル名リストからファイル名を順番に取り出す
-for layout_flame in layout_flame_list:
-    # 該当するレイアウト枠を挿入した新規ページを追加
-    add_page(layout_flame)
 
-    # テキストボックス調整
-    if layout_flame == "layout-flame_1-L" :
-        id = 1  # layout-flame_1-L
-        ads = glob.glob('./img/ad-img/*.1_*.*')  # xxx.1_xxx.pngという名前のファイルをさがす
-        # print(len(ads))
-        length = len(ads)
-        ad = ads[length-length+1]  # 添字により任意の写真を指定
-        # print(ad)
-        insert_textbox_1_L(id)
-        insert_ad_1_L(id, ad)
-    elif layout_flame == "layout-flame_1-R" :
-        id = 2  # layout-flame_1-R
-        ads = glob.glob('./img/ad-img/*.1_*.*') 
-        length = len(ads)
-        ad = ads[length-length+1]
-        insert_textbox_1_R(id)
-        insert_ad_1_R(id, ad)
-    elif layout_flame == "layout-flame_1(8)-L" : 
-        id = 3  # layout-flame_1(8)-L
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        ad6 = ads[length-length]
-        ad7 = ads[length-length]
-        ad8 = ads[length-length]
-        insert_textbox_1_L(id)
-        insert_ad_18_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
-    elif layout_flame == "layout-flame_1(8)-R" : 
-        id = 4  # layout-flame_1(8)-R
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        ad6 = ads[length-length]
-        ad7 = ads[length-length]
-        ad8 = ads[length-length]
-        insert_textbox_1_R(id)
-        insert_ad_18_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
-    elif layout_flame == "layout-flame_2-2-L" : 
-        id = 5  # layout-flame_2-2-L
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        insert_textbox_2_2_L(id)
-        insert_ad_2_2_L(id, ad1, ad2)
-    elif layout_flame == "layout-flame_2-2-R" : 
-        id = 6  # layout-flame_2-2-R
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        insert_textbox_2_2_R(id)
-        insert_ad_2_2_R(id, ad1, ad2)
-    elif layout_flame == "layout-flame_2-4-4-L" : 
-        id = 7  # layout-flame_2-4-4-L
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        insert_textbox_2_4_L(id)
-        insert_ad_2_4_4_L(id, ad1, ad2, ad3)
-    elif layout_flame == "layout-flame_2-4-4-R" : 
-        id = 8  # layout-flame_2-4-4-R
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        insert_textbox_2_4_R(id)
-        insert_ad_2_4_4_R(id, ad1, ad2, ad3)
-    elif layout_flame == "layout-flame_2-4-8-L" : 
-        id = 9  # layout-flame_2-4-8-L
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad3 = ads[length-length]
-        ad4 = ads[length-length] 
-        insert_textbox_2_4_L(id)
-        insert_ad_2_4_8_L(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_2-4-8-R" : 
-        id = 10  # layout-flame_2-4-8-R
-        ads = glob.glob('./img/ad-img/*.2_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad3 = ads[length-length]
-        ad4 = ads[length-length] 
-        insert_textbox_2_4_R(id)
-        insert_ad_2_4_8_R(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_3-4-L" : 
-        id = 11  # layout-flame_3-4-L
-        ads = glob.glob('./img/ad-img/*.3_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        insert_textbox_3_L(id)
-        insert_ad_3_4_L(id, ad1, ad2)
-    elif layout_flame == "layout-flame_3-4-R" : 
-        id = 12  # layout-flame_3-4-R
-        ads = glob.glob('./img/ad-img/*.3_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad2 = ads[length-length]
-        insert_textbox_3_R(id)
-        insert_ad_3_4_R(id, ad1, ad2)
-    elif layout_flame == "layout-flame_3-8-L" : 
-        id = 13  # layout-flame_3-8-L
-        ads = glob.glob('./img/ad-img/*.3_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad2 = ads[length-length]
-        ad3 = ads[length-length] 
-        insert_textbox_3_L(id)
-        insert_ad_3_8_L(id, ad1, ad2, ad3)
-    elif layout_flame == "layout-flame_3-8-R" : 
-        id = 14  # layout-flame_3-8-R
-        ads = glob.glob('./img/ad-img/*.3_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad2 = ads[length-length]
-        ad3 = ads[length-length] 
-        insert_textbox_3_R(id)
-        insert_ad_3_8_R(id, ad1, ad2, ad3)
-    elif layout_flame == "layout-flame_3(4)-4-L" : 
-        id = 15  # layout-flame_3(4)-4-L
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        insert_textbox_3_L(id)
-        insert_ad_34_4_L(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_3(4)-4-R" : 
-        id = 16  # layout-flame_3(4)-4-R
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        insert_textbox_3_R(id)
-        insert_ad_34_4_R(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_3(4)-8-L" : 
-        id = 17  # layout-flame_3(4)-8-L
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad4 = ads[length-length]
-        ad5 = ads[length-length] 
-        insert_textbox_3_L(id)
-        insert_ad_34_8_L(id, ad1, ad2, ad3, ad4, ad5)
-    elif layout_flame == "layout-flame_3(4)-8-R" : 
-        id = 18  # layout-flame_3(4)-8-R
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*')
-        length = len(ads)
-        ad4 = ads[length-length]
-        ad5 = ads[length-length] 
-        insert_textbox_3_R(id)
-        insert_ad_34_8_R(id, ad1, ad2, ad3, ad4, ad5)
-    elif layout_flame == "layout-flame_3(8)-4-L" : 
-        id = 19  # layout-flame_3(8)-4-L
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        ad6 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad7 = ads[length-length]
-        insert_textbox_3_L(id)
-        insert_ad_38_4_L(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7)
-    elif layout_flame == "layout-flame_3(8)-8-R" : 
-        id = 20  # layout-flame_3(8)-8-R
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        ad6 = ads[length-length]
-        ad7 = ads[length-length]
-        ad8 = ads[length-length]
-        insert_textbox_3_R(id)
-        insert_ad_38_8_R(id, ad1, ad2, ad3, ad4, ad5, ad6, ad7, ad8)
-    elif layout_flame == "layout-flame_4-4-4-4-L" : 
-        id = 21  # layout-flame_4-4-4-4-L
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        insert_textbox_4_L(id)
-        insert_ad_4_4_4_4_L(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_4-4-4-4-R" : 
-        id = 22  # layout-flame_4-4-4-4-R
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ad4 = ads[length-length]
-        insert_textbox_4_R(id)
-        insert_ad_4_4_4_4_R(id, ad1, ad2, ad3, ad4)
-    elif layout_flame == "layout-flame_4-4-4-8-L" : 
-        id = 23  # layout-flame_4-4-4-8-L
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        insert_textbox_4_L(id)
-        insert_ad_4_4_4_8_L(id, ad1, ad2, ad3, ad4, ad5)
-    elif layout_flame == "layout-flame_4-4-4-8-R" : 
-        id = 24  # layout-flame_4-4-4-8-R
-        ads = glob.glob('./img/ad-img/*.4_*.*') 
-        length = len(ads)
-        ad1 = ads[length-length]
-        ad2 = ads[length-length]
-        ad3 = ads[length-length]
-        ads = glob.glob('./img/ad-img/*.8_*.*') 
-        length = len(ads)
-        ad4 = ads[length-length]
-        ad5 = ads[length-length]
-        insert_textbox_4_R(id)
-        insert_ad_4_4_4_8_R(id, ad1, ad2, ad3, ad4, ad5)
 
+
+# ------------------------------------------------------------------------------------------------
 
 # ファイルを任意の名前で保存（現在時刻をファイル名として保存するようにしている）
 now = datetime.datetime.now()  # 現在時刻の取得
