@@ -10,6 +10,7 @@ from pptx.enum.text import MSO_AUTO_SIZE
 import datetime
 import glob
 import random
+import os
 
 # ------------------------------------------------------------------------------------------------
 # 白紙のページを追加した後、レイアウト枠の画像を挿入するための関数
@@ -633,6 +634,20 @@ ads_3 = glob.glob('/Users/kosei/Desktop/transparented/*.3_*.png')
 ads_4 = glob.glob('/Users/kosei/Desktop/transparented/*.4_*.png') 
 ads_8 = glob.glob('/Users/kosei/Desktop/transparented/*.8_*.png') 
 
+# debug
+print ('\nsize | file name')
+for ad in ads_1:
+    print ('1 | ' + os.path.basename(ad))
+for ad in ads_2:
+    print ('2 | ' + os.path.basename(ad))
+for ad in ads_3:
+    print ('3 | ' + os.path.basename(ad))
+for ad in ads_4:
+    print ('4 | ' + os.path.basename(ad))
+for ad in ads_8:
+    print ('8 | ' + os.path.basename(ad))
+
+
 # 新規ページを追加 → テキストボックス追加 → 広告追加
 def greed_1_L(id):
     global ad_id_1
@@ -1045,10 +1060,10 @@ length_ads_3 = len(ads_3)
 length_ads_4 = len(ads_4)
 length_ads_8 = len(ads_8)
 
-
+print ('\npage | random')
 while length_ads_1 > 0 or length_ads_2 > 2 or length_ads_3 > 3 or length_ads_4 > 4 or length_ads_8 > 8 :
     num = random.randint(1, 24)
-    print(str(i) + ' : ' + str(num))
+    print(str(i) + ' | ' + str(num))
     if num == 1 and length_ads_1 > 0:
         result = greed_1_L(i)
         if result != 0:
@@ -1184,6 +1199,15 @@ while length_ads_1 > 0 or length_ads_2 > 2 or length_ads_3 > 3 or length_ads_4 >
             i += 1
             length_ads_4 -= 3
             length_ads_8 -= 2
+
+else :
+    print (length_ads_1)
+    print (length_ads_2)
+    print (length_ads_3)
+    print (length_ads_4)
+    print (length_ads_8)
+
+
 
 # ファイルを任意の名前で保存（現在時刻をファイル名として保存するようにしている）
 now = datetime.datetime.now()  # 現在時刻の取得
