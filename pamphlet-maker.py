@@ -1039,111 +1039,151 @@ layout_flame_list = [
 ]
 
 i = 0
-lengh_ads_1 = len(ads_1)
-lengh_ads_2 = len(ads_2)
-lengh_ads_3 = len(ads_3)
-lengh_ads_4 = len(ads_4)
-lengh_ads_8 = len(ads_8)
+length_ads_1 = len(ads_1)
+length_ads_2 = len(ads_2)
+length_ads_3 = len(ads_3)
+length_ads_4 = len(ads_4)
+length_ads_8 = len(ads_8)
 
-for n in range(100):
+
+while length_ads_1 > 0 or length_ads_2 > 2 or length_ads_3 > 3 or length_ads_4 > 4 or length_ads_8 > 8 :
     num = random.randint(1, 24)
     print(str(i) + ' : ' + str(num))
-    if num == 1:
+    if num == 1 and length_ads_1 > 0:
         result = greed_1_L(i)
         if result != 0:
             i += 1
-    elif num == 2:
+            length_ads_1 -= 1
+    elif num == 2 and length_ads_1 > 0:
         result = greed_1_R(i)
         if result != 0:
             i += 1
-    elif num == 3:
+            length_ads_1 -= 1
+    elif num == 3 and length_ads_8 > 8:
         result = greed_18_L(i)
         if result != 0:
             i += 1
-    elif num == 4:
+            length_ads_8 -= 8
+    elif num == 4 and length_ads_8 > 8:
         result = greed_18_R(i)
         if result != 0:
             i += 1
-    elif num == 5:
+            length_ads_8 -= 8
+    elif num == 5 and length_ads_2 > 2:
         result = greed_2_2_L(i)
         if result != 0:
             i += 1
-    elif num == 6:
+            length_ads_2 -= 2
+    elif num == 6 and length_ads_2 > 2 :
         result = greed_2_2_R(i)
         if result != 0:
             i += 1
-    elif num == 7:
+            length_ads_2 -= 2
+    elif num == 7 and length_ads_2 > 1 and length_ads_4 > 2:
         result = greed_2_4_4_L(i)
         if result != 0:
             i += 1
-    elif num == 8:
+            length_ads_2 -= 1
+            length_ads_4 -= 2
+    elif num == 8 and length_ads_2 > 1 and length_ads_4 > 2:
         result = greed_2_4_4_R(i)
         if result != 0:
             i += 1
-    elif num == 9:
+            length_ads_2 -= 1
+            length_ads_4 -= 2
+    elif num == 9 and length_ads_2 > 1 and length_ads_4 > 1 and length_ads_8 > 2:
         result = greed_2_4_8_L(i)
         if result != 0:
             i += 1
-    elif num == 10:
+            length_ads_2 -= 1
+            length_ads_4 -= 1
+            length_ads_8 -= 2
+    elif num == 10 and length_ads_2 > 1 and length_ads_4 > 1 and length_ads_8 > 2:
         result = greed_2_4_8_R(i)
         if result != 0:
             i += 1
-    elif num == 11:
+            length_ads_2 -= 1
+            length_ads_4 -= 1
+            length_ads_8 -= 2
+    elif num == 11 and length_ads_3 > 1 and length_ads_4 > 1:
         result = greed_3_4_L(i)
         if result != 0:
             i += 1
-    elif num == 12:
+            length_ads_3 -= 1
+            length_ads_4 -= 1
+    elif num == 12 and length_ads_3 > 1 and length_ads_4 > 1:
         result = greed_3_4_R(i)
         if result != 0:
             i += 1
-    elif num == 13:
+            length_ads_3 -= 1
+            length_ads_4 -= 1
+    elif num == 13 and length_ads_3 > 1 and length_ads_8 > 2:
         result = greed_3_8_L(i)
         if result != 0:
             i += 1
-    elif num == 14:
+            length_ads_3 -= 1
+            length_ads_8 -= 2
+    elif num == 14 and length_ads_3 > 1 and length_ads_8 > 2:
         result = greed_3_8_R(i)
         if result != 0:
             i += 1
-    elif num == 15:
+            length_ads_3 -= 1
+            length_ads_8 -= 2
+    elif num == 15 and length_ads_4 > 4:
         result = greed_34_4_L(i)
         if result != 0:
             i += 1
-    elif num == 16:
+            length_ads_4 -= 4
+    elif num == 16 and length_ads_4 > 4:
         result = greed_34_4_R(i)
         if result != 0:
             i += 1
-    elif num == 17:
+            length_ads_4 -= 4
+    elif num == 17 and length_ads_4 > 3 and length_ads_8 > 2:
         result = greed_34_8_L(i)
         if result != 0:
             i += 1
-    elif num == 18:
+            length_ads_4 -= 3
+            length_ads_8 -= 2
+    elif num == 18 and length_ads_4 > 3 and length_ads_8 > 2:
         result = greed_34_8_R(i)
         if result != 0:
             i += 1
-    elif num == 19:
+            length_ads_4 -= 3
+            length_ads_8 -= 2
+    elif num == 19 and length_ads_4 > 1 and length_ads_8 > 6:
         result = greed_38_4_L(i)
         if result != 0:
             i += 1
-    elif num == 20:
+            length_ads_4 -= 1
+            length_ads_8 -= 6
+    elif num == 20 and length_ads_8 > 8:
         result = greed_38_8_R(i)
         if result != 0:
             i += 1
-    elif num == 21:
+            length_ads_8 -= 8
+    elif num == 21 and length_ads_4 > 4:
         result = greed_4_4_4_4_L(i)
         if result != 0:
             i += 1
-    elif num == 22:
+            length_ads_4 -= 4
+    elif num == 22 and length_ads_4 > 4:
         result = greed_4_4_4_4_R(i)
         if result != 0:
             i += 1
-    elif num == 23:
+            length_ads_4 -= 4
+    elif num == 23 and length_ads_4 > 3 and length_ads_8 > 2:
         result = greed_4_4_4_8_L(i)
         if result != 0:
             i += 1
-    elif num == 24:
+            length_ads_4 -= 3
+            length_ads_8 -= 2
+    elif num == 24 and length_ads_4 > 3 and length_ads_8 > 2:
         result = greed_4_4_4_8_R(i)
         if result != 0:
             i += 1
+            length_ads_4 -= 3
+            length_ads_8 -= 2
 
 # ファイルを任意の名前で保存（現在時刻をファイル名として保存するようにしている）
 now = datetime.datetime.now()  # 現在時刻の取得
