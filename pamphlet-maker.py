@@ -634,8 +634,8 @@ ads_3 = glob.glob('/Users/kosei/Desktop/transparented/*.3_*.png')
 ads_4 = glob.glob('/Users/kosei/Desktop/transparented/*.4_*.png') 
 ads_8 = glob.glob('/Users/kosei/Desktop/transparented/*.8_*.png') 
 
-# debug
-print ('\nsize | file name')
+
+print ('\n>>> detected advertisements below\nsize | file name')
 for ad in ads_1:
     print ('1 | ' + os.path.basename(ad))
 for ad in ads_2:
@@ -1060,7 +1060,7 @@ length_ads_3 = len(ads_3)
 length_ads_4 = len(ads_4)
 length_ads_8 = len(ads_8)
 
-print ('\npage | random')
+print ('\n>>> making pamphlet...\npage | random')
 while length_ads_1 > 0 or length_ads_2 > 2 or length_ads_3 > 3 or length_ads_4 > 4 or length_ads_8 > 8 :
     num = random.randint(1, 24)
     print(str(i) + ' | ' + str(num))
@@ -1201,11 +1201,39 @@ while length_ads_1 > 0 or length_ads_2 > 2 or length_ads_3 > 3 or length_ads_4 >
             length_ads_8 -= 2
 
 else :
-    print (length_ads_1)
-    print (length_ads_2)
-    print (length_ads_3)
-    print (length_ads_4)
-    print (length_ads_8)
+    print ('\n>>> left ad\nsize | num')
+    print ('1 | ' + str(length_ads_1))
+    print ('2 | ' + str(length_ads_2))
+    print ('3 | ' + str(length_ads_3))
+    print ('4 | ' + str(length_ads_4))
+    print ('8 | ' + str(length_ads_8))
+
+    m = 0
+    print ('\n>>> left ad\nsize | file name')
+    while length_ads_1 > 0:
+        m -= 1
+        print ('1 | ' + os.path.basename(ads_1[m]))
+        length_ads_1 -= 1
+    else : m = 0
+    while length_ads_2 > 0:
+        m -= 1
+        print ('2 | ' + os.path.basename(ads_2[m]))
+        length_ads_2 -= 1
+    else : m = 0
+    while length_ads_3 > 0:
+        m -= 1
+        print ('3 | ' + os.path.basename(ads_3[m]))
+        length_ads_3 -= 1
+    else : m = 0
+    while length_ads_4 > 0:
+        m -= 1
+        print ('4 | ' + os.path.basename(ads_4[m]))
+        length_ads_4 -= 1
+    else : m = 0
+    while length_ads_8 > 0:
+        m -= 1
+        print ('8 | ' + os.path.basename(ads_8[m]))
+        length_ads_8 -= 1
 
 
 
